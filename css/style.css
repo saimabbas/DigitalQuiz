@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "ABCFavorit";
+  src: url("/assets/font/otf/ABCFavorit-Light-Trial.otf") format("otf"),
+    url("/assets/font/woff/ABCFavorit-Light-Trial.woff") format("woff"),
+    url("/assets/font/woff2/ABCFavorit-Light-Trial.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "ABCFavorit";
+  src: url("/assets/font/otf/ABCFavorit-Book-Trial.otf") format("otf"),
+    url("/assets/font/woff/ABCFavorit-Book-Trial.woff") format("woff"),
+    url("/assets/font/woff2/ABCFavorit-Book-Trial.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "ABCFavorit";
+  src: url("/assets/font/otf/ABCFavorit-Regular-Trial.otf") format("otf"),
+    url("/assets/font/woff/ABCFavorit-Regular-Trial.woff") format("woff"),
+    url("/assets/font/woff2/ABCFavorit-Regular-Trial.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "ABCFavorit";
+  src: url("/assets/font/otf/ABCFavorit-Medium-Trial.otf") format("otf"),
+    url("/assets/font/woff/ABCFavorit-Medium-Trial.woff") format("woff"),
+    url("/assets/font/woff2/ABCFavorit-Medium-Trial.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ABCFavorit";
+  src: url("/assets/font/otf/ABCFavorit-Bold-Trial.otf") format("otf"),
+    url("/assets/font/woff/ABCFavorit-Bold-Trial.woff") format("woff"),
+    url("/assets/font/woff2/ABCFavorit-Bold-Trial.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  font-size: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "ABCFavorit", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+.box {
+  width: 100%;
+  max-width: 2500px;
+  margin: 0 auto;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+html,
+body {
+  background-color: #000;
+}
+p {
+  font-size: 1.75rem;
+}
+h5 {
+  font-size: 2.5rem;
+}
+h6 {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 7.5rem;
+  font-weight: 600;
+}
+h1 span {
+  text-decoration: underline;
+}
+h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+.quiz-top {
+  width: 100%;
+  padding: 0 2rem;
+  height: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.quiz-prog {
+  width: 100%;
+  height: 1.25rem;
+  border: 2px solid #fff;
+  margin: 0.5rem 0 0 0;
+  border-radius: 1000px;
+  position: relative;
+}
+.quiz-prog-inner {
+  height: 1.25rem;
+  width: 25%;
+  border-radius: 1000px 0 0 1000px;
+  background-color: #fff;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.quiz-bottom {
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  bottom: 0;
+}
+.quiz-bottom-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+}
+.quiz-bottom-1 h5 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000;
+}
+.quiz-step-1 {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+  min-height: calc(100vh - 14.5rem);
+}
+.quiz-step-1 h2 {
+  margin: 2.5rem 0;
+}
+h1 {
+  line-height: 8rem;
+}
+.quiz-step-2 {
+  width: 100%;
+  padding: 2rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: calc(100vh - 14.5rem);
+  display: none;
+}
+.quiz-step-2 > h5 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-weight: 400;
+  padding: 0 2rem;
+}
+.app table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 3.5rem 1px 0 0;
+}
+.app table,
+.app td {
+  border: 1px solid;
+}
+.app td {
+  padding: 3rem 3rem;
+  width: max-content;
+}
+.app td p {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.app table,
+.app td:first-child {
+  border-left: 0;
+}
+.app table,
+.app td:last-child {
+  border-right: 0;
+}
+.arrow-box {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrow-box:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.arrow-box span {
+  font-size: 3rem;
+}
+.app td:nth-child(1),
+.app td:nth-child(3),
+.app td:nth-child(4) {
+  width: max-content;
+}
+.app td:nth-child(2) {
+  width: 100%;
+}
+.quiz-step-3 {
+  width: 100%;
+  padding: 2rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 14.5rem);
+  max-width: 850px;
+  margin: 0 auto;
+  display: none;
+}
+.quiz-step-3 h1 {
+  margin: 0 0 5rem 0;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 3rem;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding: 0.5rem 0;
+  font-weight: 300;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.quiz-step-4 {
+  width: 100%;
+  padding: 2rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 14.5rem);
+  max-width: 850px;
+  margin: 0 auto;
+}
+.input-grid-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2.5rem;
+}
+.quiz-step-4 > h6 {
+  font-weight: 400;
+  margin: 2.5rem 0;
+}
+.checkbox-con {
+  width: 100%;
+  margin: 5rem 0 2.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.checkbox-con input {
+  margin: 0 1rem 0 0;
+}
+.checkbox-con input {
+  display: none;
+}
+.checkbox-con label {
+  width: 2rem;
+  height: 2rem;
+  background-color: #000;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  margin: 0 2.5rem 0 0;
+  justify-content: center;
+  cursor: pointer;
+}
+.checkbox-con label span {
+  color: #000;
+  font-size: 2rem;
+}
+.checkbox-con input:checked + label {
+  background-color: #fff;
+}
+.review-p {
+  padding: 0 0 0 4.5rem;
+}

@@ -132,7 +132,6 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: calc(100vh - 14.5rem);
 }
 .quiz-step-1-content {
   width: 100%;
@@ -153,7 +152,6 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: calc(100vh - 14.5rem);
 }
 .quiz-step-2-content {
   width: 100%;
@@ -222,7 +220,6 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: calc(100vh - 14.5rem);
 }
 .quiz-step-3-content {
   background-color: #000;
@@ -256,7 +253,6 @@ input::placeholder {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: calc(100vh - 14.5rem);
 }
 .quiz-step-4-content {
   max-width: 850px;
@@ -376,6 +372,9 @@ input::placeholder {
   top: 8.5rem;
   left: 0%;
   background-color: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 14.5rem);
 }
 .quiz-step-2,
 .quiz-step-3,

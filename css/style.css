@@ -259,7 +259,7 @@ input::placeholder {
 }
 .quiz-step-4-content {
   max-width: 850px;
-  padding: 8.5rem 2rem 6rem 2rem;
+  padding: 2rem 2rem 6rem 2rem;
   margin: 0 auto;
   width: 100%;
   background-color: #000;
@@ -376,6 +376,11 @@ input::placeholder {
   top: 8.5rem;
   left: 0%;
   background-color: #000;
+}
+.quiz-step-1,
+.quiz-step-2,
+.quiz-step-3,
+.quiz-step-4 {
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100vh - 14.5rem);
@@ -403,11 +408,6 @@ input::placeholder {
   z-index: 2;
 }
 
-@media screen and (max-width: 1440px) {
-  .quiz-step-4-content {
-    padding: 10rem 0 0 0;
-  }
-}
 @media screen and (max-width: 1000px) {
   .input-grid-box {
     grid-template-columns: 1fr;
@@ -425,23 +425,27 @@ input::placeholder {
     width: 4rem;
     height: 4rem;
   }
-  .quiz-step-4-content {
-    padding: 15rem 0 0 0;
-  }
 }
 @media screen and (max-width: 750px) {
   h1 {
-    font-size: 5.5rem;
+    line-height: 5rem;
+    font-size: 4.5rem;
+  }
+  h1 br {
+    display: none;
+  }
+  h2 {
+    font-size: 2.75rem;
   }
   .app td {
-    padding: 1.25rem 1.25rem;
+    padding: 3rem 1.75rem;
   }
   .app td p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   .arrow-box {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
   }
   h5 {
     font-size: 2rem;
@@ -449,10 +453,15 @@ input::placeholder {
   .arrow-box span {
     font-size: 2rem;
   }
-  h1 {
-    line-height: 6rem;
-  }
   .quiz-step-4-content h1 br {
     display: none;
+  }
+  p,
+  h6 {
+    font-size: 1.5rem;
+  }
+  input[type="text"],
+  input[type="email"] {
+    font-size: 2.5rem;
   }
 }

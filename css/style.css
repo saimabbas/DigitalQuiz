@@ -87,6 +87,7 @@ h2 {
 }
 .quiz-section {
   width: 100%;
+  min-height: 100vh;
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
@@ -400,4 +401,58 @@ input::placeholder {
 }
 .quiz-step-4 {
   z-index: 2;
+}
+
+@media screen and (max-width: 1440px) {
+  .quiz-step-4-content {
+    padding: 10rem 0 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .input-grid-box {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 6.5rem;
+  }
+  .app td {
+    padding: 2rem 2rem;
+  }
+  .app td p {
+    font-size: 2rem;
+  }
+  .arrow-box {
+    width: 4rem;
+    height: 4rem;
+  }
+  .quiz-step-4-content {
+    padding: 15rem 0 0 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+  .app td {
+    padding: 1.25rem 1.25rem;
+  }
+  .app td p {
+    font-size: 1.5rem;
+  }
+  .arrow-box {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  .arrow-box span {
+    font-size: 2rem;
+  }
+  h1 {
+    line-height: 6rem;
+  }
+  .quiz-step-4-content h1 br {
+    display: none;
+  }
 }

@@ -377,13 +377,17 @@ input::placeholder {
   left: 0%;
   background-color: #000;
 }
-.quiz-step-1,
-.quiz-step-2,
-.quiz-step-3,
-.quiz-step-4 {
+.quiz-step-1-content,
+.quiz-step-2-content,
+.quiz-step-3-content,
+.quiz-step-4-content {
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100vh - 14.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .quiz-step-2,
 .quiz-step-3,

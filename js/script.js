@@ -46,21 +46,17 @@ let S3S4 = gsap.timeline({
 S3S4.fromTo(
   ".quiz-step-3",
   {
-    opacity: "1",
     x: 0,
   },
   {
-    opacity: 0,
     x: "-100%",
   }
 ).fromTo(
   ".quiz-step-4",
   {
-    opacity: "0",
     x: "300%",
   },
   {
-    opacity: 1,
     x: 0,
   },
   0

@@ -88,6 +88,9 @@ h2 {
 .quiz-section {
   width: 100%;
   position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .quiz-top {
   width: 100%;
@@ -127,7 +130,6 @@ h2 {
 }
 .quiz-step-1 {
   width: 100%;
-  padding: 2rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -135,6 +137,7 @@ h2 {
 }
 .quiz-step-1-content {
   width: 100%;
+  padding: 2rem 2rem 6rem 2rem;
   width: 100%;
   max-width: 850px;
   margin: 0 auto;
@@ -147,13 +150,13 @@ h1 {
 }
 .quiz-step-2 {
   width: 100%;
-  padding: 2rem 0 6rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 .quiz-step-2-content {
+  padding: 2rem 0 6rem 0;
   width: 100%;
   background-color: #000;
 }
@@ -215,7 +218,6 @@ h1 {
 }
 .quiz-step-3 {
   width: 100%;
-  padding: 2rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -224,6 +226,7 @@ h1 {
 .quiz-step-3-content {
   background-color: #000;
   width: 100%;
+  padding: 8.5rem 2rem 6rem 2rem;
   max-width: 850px;
   margin: 0 auto;
 }
@@ -248,7 +251,6 @@ input::placeholder {
 
 .quiz-step-4 {
   width: 100%;
-  padding: 2rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -256,6 +258,7 @@ input::placeholder {
 }
 .quiz-step-4-content {
   max-width: 850px;
+  padding: 8.5rem 2rem 6rem 2rem;
   margin: 0 auto;
   width: 100%;
   background-color: #000;
@@ -368,7 +371,7 @@ input::placeholder {
 .quiz-step-2,
 .quiz-step-3,
 .quiz-step-4 {
-  position: fixed;
+  position: absolute;
   top: 8.5rem;
   left: 0%;
   background-color: #000;

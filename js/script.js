@@ -63,50 +63,42 @@ S3S4.fromTo(
 );
 
 $(".quiz-bottom-1").click(() => {
-  /* $(".quiz-step-1").css({ display: "none" });
-  $(".quiz-step-2").css({ display: "flex" }); */
+  document.getElementById("step-number").innerHTML = "2/4";
   S1S2.play(0);
   $(".quiz-bottom-1").css({ display: "none" });
   $(".quiz-bottom-2").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "50%" });
-  $(".quiz-top > p").innerHTML = "2/4";
 });
 $(".quiz-bottom-2 .next-btn").click(() => {
-  /* $(".quiz-step-2").css({ display: "none" });
-  $(".quiz-step-3").css({ display: "flex" }); */
+  document.getElementById("step-number").innerHTML = "3/4";
   S2S3.play(0);
-
   $(".quiz-bottom-2").css({ display: "none" });
   $(".quiz-bottom-3").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "75%" });
 });
 $(".quiz-bottom-3 .next-btn").click(() => {
-  /* $(".quiz-step-3").css({ display: "none" });
-  $(".quiz-step-4").css({ display: "flex" }); */
+  document.getElementById("step-number").innerHTML = "4/4";
   S3S4.play(0);
   $(".quiz-bottom-3").css({ display: "none" });
   $(".quiz-bottom-4").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "100%" });
 });
 $(".quiz-bottom-4 .back-btn").click(() => {
-  /* $(".quiz-step-4").css({ display: "none" });
-  $(".quiz-step-3").css({ display: "flex" }); */
+  document.getElementById("step-number").innerHTML = "3/4";
   S3S4.reverse(0);
   $(".quiz-bottom-4").css({ display: "none" });
   $(".quiz-bottom-3").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "75%" });
 });
 $(".quiz-bottom-3 .back-btn").click(() => {
-  /* $(".quiz-step-3").css({ display: "none" });
-  $(".quiz-step-2").css({ display: "flex" }); */
+  document.getElementById("step-number").innerHTML = "2/4";
   S2S3.reverse(0);
   $(".quiz-bottom-3").css({ display: "none" });
   $(".quiz-bottom-2").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "50%" });
 });
 $(".quiz-bottom-2 .back-btn").click(() => {
-  /* $(".quiz-step-2").css({ display: "none" });
-  $(".quiz-step-1").css({ display: "flex" }); */
+  document.getElementById("step-number").innerHTML = "1/4";
   S1S2.reverse(0);
   $(".quiz-bottom-2").css({ display: "none" });
   $(".quiz-bottom-1").css({ display: "flex" });

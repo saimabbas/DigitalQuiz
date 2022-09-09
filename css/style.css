@@ -61,6 +61,8 @@
 html,
 body {
   background-color: #000;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 p {
   font-size: 1.75rem;
@@ -93,35 +95,21 @@ h2 {
 }
 .quiz-prog {
   width: 100%;
-  height: 1.25rem;
   border: 2px solid #fff;
   margin: 0.5rem 0 0 0;
   border-radius: 1000px;
+  height: 15px;
   position: relative;
 }
 .quiz-prog-inner {
-  height: 1.25rem;
   width: 25%;
-  border-radius: 1000px 0 0 1000px;
+  height: 12px;
   background-color: #fff;
+  border-radius: 1000px;
+  transition: 0.5s;
   position: absolute;
-  top: -2px;
-  left: -2px;
-}
-.quiz-bottom {
-  width: 100%;
-  height: 6rem;
-  position: fixed;
-  bottom: 0;
-}
-.quiz-bottom-1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #fff;
+  top: 0;
+  left: 0;
 }
 .quiz-bottom-1 h5 {
   font-size: 2.5rem;
@@ -130,15 +118,18 @@ h2 {
 }
 .quiz-step-1 {
   width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
   padding: 2rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  display: none;
   min-height: calc(100vh - 14.5rem);
+}
+.quiz-step-1-content {
+  width: 100%;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
 }
 .quiz-step-1 h2 {
   margin: 2.5rem 0;
@@ -154,9 +145,12 @@ h1 {
   align-items: flex-start;
   justify-content: flex-start;
   min-height: calc(100vh - 14.5rem);
-  display: none;
 }
-.quiz-step-2 > h5 {
+.quiz-step-2-content {
+  width: 100%;
+  background-color: #000;
+}
+.quiz-step-2-content > h5 {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -220,9 +214,12 @@ h1 {
   align-items: flex-start;
   justify-content: center;
   min-height: calc(100vh - 14.5rem);
+}
+.quiz-step-3-content {
+  background-color: #000;
+  width: 100%;
   max-width: 850px;
   margin: 0 auto;
-  display: none;
 }
 .quiz-step-3 h1 {
   margin: 0 0 5rem 0;
@@ -251,8 +248,12 @@ input::placeholder {
   align-items: flex-start;
   justify-content: center;
   min-height: calc(100vh - 14.5rem);
+}
+.quiz-step-4-content {
   max-width: 850px;
   margin: 0 auto;
+  width: 100%;
+  background-color: #000;
 }
 .input-grid-box {
   width: 100%;
@@ -261,7 +262,7 @@ input::placeholder {
   grid-template-rows: auto;
   grid-gap: 2.5rem;
 }
-.quiz-step-4 > h6 {
+.quiz-step-4-content > h6 {
   font-weight: 400;
   margin: 2.5rem 0;
 }
@@ -298,4 +299,94 @@ input::placeholder {
 }
 .review-p {
   padding: 0 0 0 4.5rem;
+}
+.quiz-bottom {
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+.quiz-bottom-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.quiz-bottom-2,
+.quiz-bottom-3,
+.quiz-bottom-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quiz-bottom-2 .back-btn,
+.quiz-bottom-3 .back-btn,
+.quiz-bottom-4 .back-btn {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.quiz-bottom-2 .next-btn,
+.quiz-bottom-3 .next-btn,
+.quiz-bottom-4 .next-btn {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.quiz-step-1,
+.quiz-step-2,
+.quiz-step-3,
+.quiz-step-4 {
+  position: absolute;
+  top: 8.5rem;
+  left: 0%;
+  /* transform: translate(-50%, 0); */
+  background-color: #000;
+}
+.quiz-step-2,
+.quiz-step-3,
+.quiz-step-4 {
+  /* opacity: 0; */
+}
+.quiz-bottom-2,
+.quiz-bottom-3,
+.quiz-bottom-4 {
+  display: none;
+}
+.quiz-step-1 {
+  z-index: 5;
+}
+.quiz-step-2 {
+  z-index: 4;
+}
+.quiz-step-3 {
+  z-index: 3;
+}
+.quiz-step-4 {
+  z-index: 2;
 }

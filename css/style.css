@@ -515,6 +515,7 @@ input::placeholder {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
+  display: none;
 }
 .ppm-head {
   width: 100%;

@@ -199,8 +199,10 @@ h1 {
   border-right: 0;
 }
 .arrow-box {
-  width: 5rem;
-  height: 5rem;
+  min-width: 5rem;
+  max-width: 5rem;
+  min-height: 5rem;
+  max-height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,10 +315,6 @@ input::placeholder {
 }
 .review-p {
   padding: 0 0 0 4.5rem;
-}
-.review-p a {
-  text-decoration: underline;
-  cursor: pointer;
 }
 .quiz-bottom {
   width: 100%;
@@ -447,6 +445,7 @@ input::placeholder {
 .quiz-bottom-4 {
   display: none;
 }
+.ppm-body::-webkit-scrollbar,
 .quiz-step-1::-webkit-scrollbar,
 .quiz-step-2::-webkit-scrollbar,
 .quiz-step-2-2::-webkit-scrollbar,
@@ -454,6 +453,7 @@ input::placeholder {
 .quiz-step-4::-webkit-scrollbar {
   width: 10px;
 }
+.ppm-body::-webkit-scrollbar-track,
 .quiz-step-1::-webkit-scrollbar-track,
 .quiz-step-2::-webkit-scrollbar-track,
 .quiz-step-2-2::-webkit-scrollbar-track,
@@ -462,6 +462,7 @@ input::placeholder {
   border-radius: 1000px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+.ppm-body::-webkit-scrollbar-thumb,
 .quiz-step-1::-webkit-scrollbar-thumb,
 .quiz-step-2::-webkit-scrollbar-thumb,
 .quiz-step-2-2::-webkit-scrollbar-thumb,
@@ -503,50 +504,75 @@ input::placeholder {
 .error-msg span {
   cursor: pointer;
 }
-.privacy-policy-modal {
-  width: calc(100vw - 4rem);
-  max-width: 85rem;
-  height: 100vh;
-  max-height: 50rem;
-  padding: 2rem;
-  background-color: white;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-}
-.ppm-head {
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+
+.choices-container {
   width: 100%;
-  height: max-content;
+  margin: 3.5rem 1px 0 0;
+}
+.choice-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.choice-item {
+  border-top: 1px solid white;
+  background-color: #000;
+}
+.choice-item:last-child {
+  border: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.choice-item div:not(.arrow-box) {
+  padding: 2.5rem 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
 }
-.ppm-head span {
-  color: black;
-  font-size: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
+.choice-description {
+  width: 100%;
+}
+.choice-index-no {
+  min-width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
 }
-.ppm-head p {
-  color: black;
-  font-size: 2.5rem;
-  font-weight: 600;
+.choice-index-no span {
+  margin: 0 1.5rem 0 0;
 }
-.ppm-body {
+.choice-item div:not(:last-child) {
+  border-right: 1px solid white;
+}
+.choice-item p {
+  font-size: 2.25rem;
+}
+
+.container {
+  position: relative;
+  min-height: 500vh;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.list-item {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 90%;
-  overflow-x: hidden;
-  padding: 2rem 0;
-  overflow-y: auto;
-  color: black;
-  font-size: 2rem;
 }
+
+.item-content {
+  height: 100%;
+}
+
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+
 @media screen and (max-width: 1000px) {
   .input-grid-box {
     grid-template-columns: 1fr;
@@ -561,14 +587,19 @@ input::placeholder {
     font-size: 2rem;
   }
   .arrow-box {
-    width: 4rem;
-    height: 4rem;
+    min-width: 4rem;
+    max-width: 4rem;
+    min-height: 4rem;
+    max-height: 4rem;
+  }
+  .choice-index-no {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 5rem;
   }
 }
 @media screen and (max-width: 750px) {
-  .privacy-policy-modal {
-    max-height: 75vh;
-  }
   h1 {
     line-height: 5rem;
     font-size: 4.5rem;
@@ -586,8 +617,10 @@ input::placeholder {
     font-size: 1.75rem;
   }
   .arrow-box {
-    width: 3rem;
-    height: 3rem;
+    min-width: 3rem;
+    max-width: 3rem;
+    min-height: 3rem;
+    max-height: 3rem;
   }
   h5 {
     font-size: 2rem;
@@ -608,5 +641,8 @@ input::placeholder {
   }
   .quiz-bottom h5 {
     font-size: 2rem;
+  }
+  .choice-item p {
+    font-size: 1.75rem !important;
   }
 }

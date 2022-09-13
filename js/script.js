@@ -160,3 +160,9 @@ $(".quiz-bottom-2 .back-btn").click(() => {
 $(".error-msg span").click(() => {
   $(".error-msg").css({ display: "none" });
 });
+$(".ppm-head span").click(() => {
+  $(".privacy-policy-modal").css({ display: "none" });
+});
+$(".review-p a").click(() => {
+  $(".privacy-policy-modal").css({ display: "block" });
+});

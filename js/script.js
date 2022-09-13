@@ -1,5 +1,9 @@
 let S1S2 = gsap.timeline({
   paused: true,
+  defaults: {
+    // ease: power4.inOut,
+    // duration: 1,
+  },
 });
 S1S2.fromTo(
   ".quiz-step-1",
@@ -19,11 +23,41 @@ S1S2.fromTo(
   },
   0
 );
-let S2S3 = gsap.timeline({
+
+let S2S22 = gsap.timeline({
   paused: true,
+  defaults: {
+    // ease: power4.inOut,
+    // duration: 1,
+  },
 });
-S2S3.fromTo(
+S2S22.fromTo(
   ".quiz-step-2",
+  {
+    x: 0,
+  },
+  {
+    x: "-100%",
+  }
+).fromTo(
+  ".quiz-step-2-2",
+  {
+    x: "100%",
+  },
+  {
+    x: 0,
+  },
+  0
+);
+let S22S3 = gsap.timeline({
+  paused: true,
+  defaults: {
+    // ease: power4.inOut,
+    // duration: 1,
+  },
+});
+S22S3.fromTo(
+  ".quiz-step-2-2",
   {
     x: 0,
   },
@@ -33,7 +67,7 @@ S2S3.fromTo(
 ).fromTo(
   ".quiz-step-3",
   {
-    x: "200%",
+    x: "100%",
   },
   {
     x: 0,
@@ -42,6 +76,10 @@ S2S3.fromTo(
 );
 let S3S4 = gsap.timeline({
   paused: true,
+  defaults: {
+    // ease: power4.inOut,
+    // duration: 1,
+  },
 });
 S3S4.fromTo(
   ".quiz-step-3",
@@ -54,7 +92,7 @@ S3S4.fromTo(
 ).fromTo(
   ".quiz-step-4",
   {
-    x: "300%",
+    x: "100%",
   },
   {
     x: 0,
@@ -63,44 +101,59 @@ S3S4.fromTo(
 );
 
 $(".quiz-bottom-1").click(() => {
-  document.getElementById("step-number").innerHTML = "2/4";
+  document.getElementById("step-number").innerHTML = "2/5";
   S1S2.play(0);
   $(".quiz-bottom-1").css({ display: "none" });
   $(".quiz-bottom-2").css({ display: "flex" });
-  $(".quiz-prog-inner").css({ width: "50%" });
+  $(".quiz-prog-inner").css({ width: "40%" });
 });
 $(".quiz-bottom-2 .next-btn").click(() => {
-  document.getElementById("step-number").innerHTML = "3/4";
-  S2S3.play(0);
+  document.getElementById("step-number").innerHTML = "3/5";
+  S2S22.play(0);
   $(".quiz-bottom-2").css({ display: "none" });
+  $(".quiz-bottom-2-2").css({ display: "flex" });
+  $(".quiz-prog-inner").css({ width: "60%" });
+});
+$(".quiz-bottom-2-2 .next-btn").click(() => {
+  document.getElementById("step-number").innerHTML = "4/5";
+  S22S3.play(0);
+  $(".quiz-bottom-2-2").css({ display: "none" });
   $(".quiz-bottom-3").css({ display: "flex" });
-  $(".quiz-prog-inner").css({ width: "75%" });
+  $(".quiz-prog-inner").css({ width: "80%" });
 });
 $(".quiz-bottom-3 .next-btn").click(() => {
-  document.getElementById("step-number").innerHTML = "4/4";
+  document.getElementById("step-number").innerHTML = "5/5";
   S3S4.play(0);
   $(".quiz-bottom-3").css({ display: "none" });
   $(".quiz-bottom-4").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "100%" });
 });
+
 $(".quiz-bottom-4 .back-btn").click(() => {
-  document.getElementById("step-number").innerHTML = "3/4";
+  document.getElementById("step-number").innerHTML = "4/5";
   S3S4.reverse(0);
   $(".quiz-bottom-4").css({ display: "none" });
   $(".quiz-bottom-3").css({ display: "flex" });
-  $(".quiz-prog-inner").css({ width: "75%" });
+  $(".quiz-prog-inner").css({ width: "80%" });
 });
 $(".quiz-bottom-3 .back-btn").click(() => {
-  document.getElementById("step-number").innerHTML = "2/4";
-  S2S3.reverse(0);
+  document.getElementById("step-number").innerHTML = "3/5";
+  S22S3.reverse(0);
   $(".quiz-bottom-3").css({ display: "none" });
+  $(".quiz-bottom-2-2").css({ display: "flex" });
+  $(".quiz-prog-inner").css({ width: "60%" });
+});
+$(".quiz-bottom-2-2 .back-btn").click(() => {
+  document.getElementById("step-number").innerHTML = "2/5";
+  S2S22.reverse(0);
+  $(".quiz-bottom-2-2").css({ display: "none" });
   $(".quiz-bottom-2").css({ display: "flex" });
-  $(".quiz-prog-inner").css({ width: "50%" });
+  $(".quiz-prog-inner").css({ width: "40%" });
 });
 $(".quiz-bottom-2 .back-btn").click(() => {
-  document.getElementById("step-number").innerHTML = "1/4";
+  document.getElementById("step-number").innerHTML = "1/5";
   S1S2.reverse(0);
   $(".quiz-bottom-2").css({ display: "none" });
   $(".quiz-bottom-1").css({ display: "flex" });
-  $(".quiz-prog-inner").css({ width: "25%" });
+  $(".quiz-prog-inner").css({ width: "20%" });
 });

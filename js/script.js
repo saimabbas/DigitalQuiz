@@ -157,3 +157,6 @@ $(".quiz-bottom-2 .back-btn").click(() => {
   $(".quiz-bottom-1").css({ display: "flex" });
   $(".quiz-prog-inner").css({ width: "20%" });
 });
+$(".error-msg span").click(() => {
+  $(".error-msg").css({ display: "none" });
+});
